@@ -1,0 +1,90 @@
+.thumbnail {
+  width: 100%;
+}
+.video-title {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px ;
+  margin-bottom: 10px;
+}
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+.chanel-pic {
+  position: relative;
+}
+.chanel-tooltip {
+  position: absolute;
+  top: 45px; 
+  left: 0;
+  width: auto; /* ให้กว้างตามตัวหนังสือ */
+  min-width: 120px; /* แต่กว้างอย่างน้อย 120px */
+  padding: 10px;
+  background-color: white; /* ใส่พื้นหลังสีขาว */
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  font-family: Roboto, Arial;
+  font-size: 12px;
+  opacity: 0; 
+  pointer-events: none; 
+  transition: opacity 0.2s; 
+  z-index: 100;
+}
+.profile-pic:hover .chanel-tooltip {
+  opacity: 1; /* เปลี่ยนเป็นทึบ 100% (มองเห็นได้) */
+}
+.profile-pic {
+  width: 36px;
+  border-radius: 50px;
+}
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+.video-author {
+  margin-bottom: 4px;
+}
+.video-grid {
+  display: grid;
+  /* ลบ 1fr 1fr 1fr ทิ้ง แล้วใส่คาถานี้เข้าไปแทนครับ 👇 */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  
+  column-gap: 16px;
+  row-gap: 40px;
+}
+/*
+@media (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 751px) and (max-width:999px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  } 
+}
+@media (min-width: 1000px){
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+*/
+.video-time {
+  font-family: Roboto, Arial;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px;
+  border-radius: 2px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+}
